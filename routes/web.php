@@ -25,6 +25,9 @@ Route::get('/destination', function () {
 Route::get('/destination/detail', function () {
     return view('frontend.destination.detail');
 });
+Route::get('/contact', function () {
+    return view('frontend.contact');
+});
 
 Auth::routes();
 
