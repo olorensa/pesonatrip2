@@ -60,16 +60,16 @@
                     <nav>
                       <ul id="navigation">
                         <li>
-                          <a class="active" href="index.html">home</a>
+                          <a class="active" href="{{ url('/') }}">home</a>
                         </li>
                         <li>
-                          <a href="/frontend/about">About</a>
+                          <a href="{{ url('/about') }}">About</a>
                         </li>
                         <li>
-                          <a href="travel_destination.html">Destination</a>
+                          <a href="{{ url('/destination') }}">Destination</a>
                         </li>
                         <li>
-                          <a href="contact.html">Contact</a>
+                          <a href="{{ url('/contact') }}">Contact</a>
                         </li>
                       </ul>
                     </nav>
