@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Slider;
+use App\Models\Destination;
+use App\Models\Testimonial;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $sliders = Slider ::latest()->get();
+        $destination = Destination::latest()->get();
+        $testimonials = Testimonial::latest()->get();
+        return view('frontend.home', compact('sliders','destination','testimonials'));
     }
 }
